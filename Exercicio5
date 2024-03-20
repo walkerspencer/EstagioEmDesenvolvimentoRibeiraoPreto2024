@@ -1,0 +1,25 @@
+public class TesteEstagioExerc5 {
+
+	public static void main(String[] args) {
+		/*
+		 *  Escreva um programa que inverta os caracteres de um string.
+		 *  IMPORTANTE:
+		 *  a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+		 *  b) Evite usar funções prontas, como, por exemplo, reverse;
+		 */
+				
+		//Defini a string que será invertida
+		String frase = "Hello World!";
+		//Inicio uma string que irá armazenar a string invertida
+		String stringInvertida = "";
+		
+		//Inicio um loop que começa no final da string e termina no inicio
+		for (int i = frase.length() -1; i>= 0; i--) {
+		//Adiciono o caractere atual da String "frase" na String invertida
+			stringInvertida += frase.charAt(i);
+		}
+		
+		//Imprimo os resultados
+		System.out.println(stringInvertida);
+	}
+}
