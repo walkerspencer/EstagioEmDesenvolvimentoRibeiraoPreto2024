@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class TesteEstagioExerc2 {
+
+	public static void main(String[] args) {
+		/*
+		 * Exercício 2
+		 * 
+		 * Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores 
+		 * (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, 
+		 * ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+		 * IMPORTANTE:Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
+		 * 
+		 */
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		//Solicito as informacoes ao usuario
+		System.out.println("Informe um numero desejado: "); 
+		int numeroInformado = sc.nextInt();
+		
+		sc.close();
+		
+		// Variaveis da sequencia de Fibornacci
+		int a = 0;
+		int b = 1;
+		
+		// Aplico as informacoes na estrutura logica
+		while(a <= numeroInformado) {
+		
+		if(a == numeroInformado) {
+		//Imprimo o restultado
+		System.out.println("O numero " + numeroInformado + " pertence a sequencia de Fibornacci!");
+			return;
+		}
+		
+		// Armazenando o valor atual de "a" em uma variavel temporaria
+		int temp = a;
+		// Atualizo o valor de "a" para ser igual a "b"
+			a = b;
+		// Atualizo o valor de "b" para ser a soma do valor anterior de "a" e o valor atual de "b"
+			b = temp + b;
+		
+		}
+		
+		//Imprimo o resultado
+		System.out.println("O numero " + numeroInformado + " nao pertence a sequencia de Fibornacci!");
+		
+	}
+
+}
